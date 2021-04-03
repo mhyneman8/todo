@@ -1,20 +1,23 @@
 
-  let addButton = document.createElement('button');
-  addButton.classList.add('button');
+  let addButton = $('<button></button>').addClass('button');
   addButton.innerText = 'Add New List';
-  addButton.addEventListener('click', function() {
+  addButton.on('click', function() {
     let list = $('<div class="container"><h2 class="title">New List</h2></div>');
     $('body').append(list);
     newList();
 
-    document.body.appendChild(list);
+    $('body')append(list);
   });
-  document.body.appendChild(addButton);
+  $('body')append(addButton);
 
 
 $('.container').draggable();
 
-
+$(document).keypress(function(e) {
+  if(e.which == 13) {
+    alert('You pressed enter');
+  }
+});
 
 function newItem(){
 
@@ -32,13 +35,14 @@ function newItem(){
 
    e.preventDefault();
 
-   if (event.key === 13) {
-     if (inputValue === '') {
-       alert("You must write something!");
-     } else{
-        $('#list').append(li);
-     }
-   }
+   //
+   // if (event.key === 13) {
+   //   if (inputValue === '') {
+   //     alert("You must write something!");
+   //   } else{
+   //      $('#list').append(li);
+   //   }
+   // }
 
  //2. Crossing out an item from the list of items:
    function crossOut() {
