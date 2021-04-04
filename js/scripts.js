@@ -1,23 +1,30 @@
 
-  let addButton = $('<button></button>').addClass('button');
-  addButton.innerText = 'Add New List';
-  addButton.on('click', function() {
-    let list = $('<div class="container"><h2 class="title">New List</h2></div>');
-    $('body').append(list);
-    newList();
+  // let addButton = $('<button></button>').addClass('button');
+  // addButton[0].innerText = 'Add New List';
+  // addButton.on('click', function() {
+  //   let list = $('<div class="container"><h2 class="title">New List</h2></div>');
+  //   $('body').append(list);
+  //   newList();
+  //
+  //   $('body')append(list);
+  // });
+  // $('body')append(addButton);
 
-    $('body')append(list);
+
+  $('#input').keyup(function(e) {
+    if (e.keyCode === 13) {
+      e.preventDefault();
+      newItem();
+    };
   });
-  $('body')append(addButton);
-
 
 $('.container').draggable();
 
-$(document).keypress(function(e) {
-  if(e.which == 13) {
-    alert('You pressed enter');
-  }
-});
+// $(document).keypress(function(e) {
+//   if(e.which == 13) {
+//     alert('You pressed enter');
+//   }
+// });
 
 function newItem(){
 
@@ -33,7 +40,7 @@ function newItem(){
      $('#list').append(li);
    }
 
-   e.preventDefault();
+
 
    //
    // if (event.key === 13) {
