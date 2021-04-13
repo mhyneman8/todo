@@ -8,10 +8,14 @@ background-color: #233d4d;
 
 .container {
   position: absolute;
+  text-align: center;
   padding: 10px;
-  width: 300px;
+  padding-top: 30px;
+  width: 400px;
+  min-height: 200px;
   margin: 0 auto;
-  margin-top: 40px;
+  margin-top: 60px;
+  margin-left: 60px;
   background: #20b2aa;
   color: #fffff3;
   border-radius: 5px;
@@ -20,6 +24,12 @@ background-color: #233d4d;
 
 .title {
   cursor: move;
+}
+
+p {
+  max-width: 300px;
+  text-align: center;
+  margin: 30px auto;
 }
 
 form {
