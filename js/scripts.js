@@ -41,16 +41,6 @@ function newItem(){
    }
 
 
-
-   //
-   // if (event.key === 13) {
-   //   if (inputValue === '') {
-   //     alert("You must write something!");
-   //   } else{
-   //      $('#list').append(li);
-   //   }
-   // }
-
  //2. Crossing out an item from the list of items:
    function crossOut() {
  		li.toggleClass("strike");
